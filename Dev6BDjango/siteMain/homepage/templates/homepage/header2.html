@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang='en'>
+	
+<head>
+	<title>Criminal Activity</title>
+	<meta charset='utf-8' />
+	
+</head>
+	
+<body class='body' style='background-color:#f6f6f6'>
+	<h2>Welcome to Criminal Activity</h2>
+		  <form action='/account/' method="get">
+  <h5>Username:</h5>
+  <input type="text" name="username"><br>
+  <h5>Password:</h5>
+  <input type="text" name="password"><br>
+  <button type="submit" formaction='/account/'>Log in</button>
+</form>
+		  <div class="col-sm-2">
+		  <br>
+
+		  <br>
+		  
+			<div class="well bs-sidebar" id="sidebar" style="background-color:#f6f6f6">
+			  <ul class="nav nav-pills nav-stacked">
+				<li><a href='/register/'>Register</a></li>
+			  </ul>
+			</div> 
+			{% block content %}
+			{% endblock %}
+		  </div>
+</body>
+
+
+</html>
+		

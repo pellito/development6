@@ -1,0 +1,44 @@
+{% extends "crime5/home2.html"%}
+
+{% block content %}
+<h5><font color ="green">You won the race!</font></h5>
+<h5><font color ="green">You need to wait 90 seconds to perform another race</font></h5>
+<h5><font color ="green">Added ${{content.4}} to your account!</font></h5>
+<h5>Straatrace:</h5>
+				<div id="1" style="height:100%; width:100%; overflow: hidden;">
+    			<div id="Offroad:" style="float: left; width:10%; background-color:#f6f6f6;">Offroad:</div>
+    			<div id="content" style="float: left; width:10%; background-color:#f6f6f6;"><form action= "{% url 'offroad' %}" method="POST">{% csrf_token %}
+      				<input type="submit" value="Start Race" id="toggle1" />
+  				</form></div>
+				<div id="rightThing" style="float: left; width:10%; background-color:#f6f6f6;">{{content.0}}% chance</div>
+				
+				<div id="2" style="height:100%; width:100%; overflow: hidden;">
+    			<div id="Offroad:" style="float: left; width:10%; background-color:#f6f6f6;">Binnenstad:</div>
+    			<div id="content" style="float: left; width:10%; background-color:#f6f6f6;"><form action= "{% url 'binnenstad' %}" method="POST">{% csrf_token %}
+      				<input type="submit" value="Start Race" id="toggle2" />
+  				</form>
+			</div>
+				
+				<div id="rightThing" style="float: left; width:10%; background-color:#f6f6f6;">{{content.1}}% chance</div>
+				
+				<div id="3" style="height:100%; width:100%; overflow: hidden;">
+    			<div id="Offroad:" style="float: left; width:10%; background-color:#f6f6f6;">Platteland:</div>
+    			<div id="content" style="float: left; width:10%; background-color:#f6f6f6;"><form action= "{% url 'platteland' %}" method="POST">{% csrf_token %}
+      				<input type="submit" value="Start Race" id="toggle3" />
+  				</form>
+				</div>
+				<div id="rightThing" style="float: left; width:10%; background-color:#f6f6f6;">{{content.2}}% chance</div>
+				
+				<div id="4" style="height:100%; width:100%; overflow: hidden;">
+    			<div id="Offroad:" style="float: left; width:10%; background-color:#f6f6f6;">Snelweg:</div>
+    			<div id="content" style="float: left; width:10%; background-color:#f6f6f6;"><form action= "{% url 'snelweg' %}" method="POST">{% csrf_token %}
+      				<input type="submit" value="Start Race" id="toggle4" />
+  				</form>
+				</div>
+				<div id="rightThing" style="float: left; width:10%; background-color:#f6f6f6;">{{content.3}}% chance</div>
+				
+				
+			  </ul>
+			  <a href='http://127.0.0.1:8000/account/'>Back</a>
+			</div> 
+{% endblock %}

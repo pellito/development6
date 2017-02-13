@@ -1,0 +1,15 @@
+RANKS:
+1: Junkie
+2: Straatdealer
+3: Huurmoordenaar
+4: Drugsbaron
+5: Maffialid
+6: Maffiabaas
+
+CRIMES:
+1: Stelen
+2: Voertuigen stelen
+3: Inbreken/overvallen
+4: Drugs dealen
+5: Straatrace
+6: Ontvoeren

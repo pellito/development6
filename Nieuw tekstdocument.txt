@@ -1,0 +1,6 @@
+INSERT INTO crimes(cId,cDesc) VALUES(1,'Junkie');
+INSERT INTO crimes(cId,cDesc) VALUES(2,'Straatdealer');
+INSERT INTO crimes(cId,cDesc) VALUES(3,'Huurmoordenaar');
+INSERT INTO crimes(cId,cDesc) VALUES(4,'Drugsbaron');
+INSERT INTO crimes(cId,cDesc) VALUES(5,'Maffialid');
+INSERT INTO crimes(cId,cDesc) VALUES(6,'Maffiabaas');

@@ -1,0 +1,64 @@
+DROP TABLE IF EXISTS suspect_cd CASCADE;
+
+DROP TABLE IF EXISTS suspect_crimes CASCADE;
+
+DROP TABLE IF EXISTS suspect CASCADE;
+DROP TABLE IF EXISTS crimes CASCADE;
+
+
+CREATE TABLE suspect (
+
+username CHAR(25),
+
+password CHAR(25),
+
+rank CHAR(50),
+
+money INT,
+reputatie INT,
+
+PRIMARY KEY(username));
+
+
+
+CREATE TABLE crimes (
+
+cId INT,
+
+cDesc CHAR(50),
+PRIMARY KEY(cId));
+
+
+
+
+CREATE TABLE suspect_cd (
+
+username CHAR(25),
+
+cId INT,
+
+cooldown INT,
+
+datum CHAR(25),
+tijd CHAR(10),
+FOREIGN KEY(username) REFERENCES suspect(username),
+
+FOREIGN KEY(cId) REFERENCES crimes(cId),
+
+PRIMARY KEY (username, cId));
+
+
+
+CREATE TABLE suspect_crimes (
+
+username CHAR(25),
+
+cId INT,
+
+experience INT,
+
+FOREIGN KEY(username) REFERENCES suspect(username),
+
+FOREIGN KEY(cId) REFERENCES crimes(cId),
+
+PRIMARY KEY (username, cId));

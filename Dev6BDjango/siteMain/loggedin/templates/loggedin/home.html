@@ -1,0 +1,21 @@
+{% extends "loggedin/home2.html" %}
+
+{% block content %}
+	{% for c in content%}
+		
+	
+	{% endfor %}
+	<ul class="nav nav-pills nav-stacked">
+		<h5> </h5>
+		<li>Username: {{content.7}} </li>
+		<li>Balance: ${{content.8}} </li>
+		<li>Rank: {{content.0}} </li>
+		<li>Reputation: {{content.9}} </li>
+		<li>Crime1Exp: {{content.1}} </li>
+		<li>Crime2Exp: {{content.2}} </li>
+		<li>Crime3Exp: {{content.3}} </li>
+		<li>Crime4Exp: {{content.4}} </li>
+		<li>Crime5Exp: {{content.5}} </li>
+		<li>Crime6Exp: {{content.6}} </li>
+		
+{% endblock %}
